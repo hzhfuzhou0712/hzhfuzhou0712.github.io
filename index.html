@@ -1,13 +1,101 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>个人主页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hzhfuzhou0712 的个人主页</title>
+    <style>
+        /* 基础样式设置 */
+        body {
+            font-family: "Microsoft YaHei", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        
+        /* 核心：左右分栏布局 */
+        .container {
+            display: flex; /* 开启弹性布局 */
+            flex-wrap: wrap; /* 手机访问时自动换行 */
+            max-width: 1000px;
+            margin: 20px auto;
+            background: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        /* 左侧部分 */
+        .left-panel {
+            flex: 1; /* 占据一半宽度 */
+            padding: 30px;
+            border-right: 1px solid #eee;
+            min-width: 300px;
+        }
+
+        /* 右侧部分 */
+        .right-panel {
+            flex: 1; /* 占据另一半宽度 */
+            padding: 30px;
+            min-width: 300px;
+        }
+
+        h2 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
+        ul { list-style: none; padding: 0; }
+        li { margin: 15px 0; }
+        
+        /* 按钮样式的链接 */
+        .btn-link {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .btn-link:hover { text-decoration: underline; color: #2980b9; }
+    </style>
 </head>
-<body style="text-align: center; padding-top: 100px; font-family: sans-serif;">
-    <h1>你好！
-    <p>第一个网页。</p>
-    <hr>
-    <p>...</p>
+<body>
+
+<header>
+    <h1>欢迎来到我的个人主页</h1>
+</header>
+
+<div class="container">
+    <!-- 左半部分：个人简介 -->
+    <div class="left-panel">
+        <h2>🙋‍♂️ 关于我</h2>
+        <p>你好！我是 hzhfuzhou0712。</p>
+        <p>这里可以写你的个人简介、兴趣爱好或者研究方向。</p>
+        <p>目前我正在学习如何通过 GitHub Pages 搭建个人网站。</p>
+        
+        <!-- 这里是添加 PDF 的地方 -->
+        <p>📄 <b>查看我的文档：</b> 
+            <a class="btn-link" href="my_resume.pdf" target="_blank">点击下载/预览 PDF</a>
+        </p>
+    </div>
+
+    <!-- 右半部分：项目/笔记 -->
+    <div class="right-panel">
+        <h2>🚀 我的项目 & 笔记</h2>
+        <ul>
+            <li>
+                <strong>📚 学习笔记：</strong>
+                <a class="btn-link" href="https://example.com" target="_blank">我的 Python 笔记</a>
+            </li>
+            <li>
+                <strong>💻 实验项目：</strong>
+                <a class="btn-link" href="https://github.com/hzhfuzhou0712" target="_blank">我的 GitHub 仓库</a>
+            </li>
+            <li>
+                <strong>✍️ 最近更新：</strong>
+                <span>2024年3月 - 网站正式上线</span>
+            </li>
+        </ul>
+    </div>
+</div>
+
 </body>
 </html>
