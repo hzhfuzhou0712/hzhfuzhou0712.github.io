@@ -5,95 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>hzhfuzhou0712 的个人主页</title>
     <style>
-        /* 基础样式设置 */
-        body {
-            font-family: "Microsoft YaHei", sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 1rem 0;
-        }
+        /* 保持简洁风格 */
+        body { font-family: -apple-system, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; background: #f9f9f9; }
+        .header { background: #333; color: white; text-align: center; padding: 40px 0; }
+        .container { display: flex; flex-wrap: wrap; max-width: 1000px; margin: 30px auto; background: white; min-height: 600px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
         
-        /* 核心：左右分栏布局 */
-        .container {
-            display: flex; /* 开启弹性布局 */
-            flex-wrap: wrap; /* 手机访问时自动换行 */
-            max-width: 1000px;
-            margin: 20px auto;
-            background: white;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-
-        /* 左侧部分 */
-        .left-panel {
-            flex: 1; /* 占据一半宽度 */
-            padding: 30px;
-            border-right: 1px solid #eee;
-            min-width: 300px;
-        }
-
-        /* 右侧部分 */
-        .right-panel {
-            flex: 1; /* 占据另一半宽度 */
-            padding: 30px;
-            min-width: 300px;
-        }
-
-        h2 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
-        ul { list-style: none; padding: 0; }
-        li { margin: 15px 0; }
+        /* 左侧栏：个人信息 */
+        .left-panel { flex: 1; padding: 40px; border-right: 1px solid #eee; min-width: 320px; }
+        .avatar { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; display: block; margin: 0 auto 20px; border: 3px solid #eee; }
+        .contact-info { text-align: center; margin-bottom: 30px; }
+        .contact-info a { color: #3498db; text-decoration: none; }
         
-        /* 按钮样式的链接 */
-        .btn-link {
-            color: #3498db;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .btn-link:hover { text-decoration: underline; color: #2980b9; }
+        .section-title { font-size: 1.2rem; border-left: 4px solid #3498db; padding-left: 10px; margin: 25px 0 15px; }
+        .edu-item { margin-bottom: 15px; font-size: 0.95rem; }
+        .edu-date { color: #888; font-size: 0.85rem; display: block; }
+        
+        .resume-btn { display: inline-block; margin-top: 10px; padding: 8px 16px; background: #3498db; color: white; text-decoration: none; border-radius: 4px; transition: 0.3s; }
+        .resume-btn:hover { background: #2980b9; }
+
+        /* 右侧栏：留空 */
+        .right-panel { flex: 1.5; padding: 40px; min-width: 320px; background: #fff; }
+        .placeholder-text { color: #ccc; text-align: center; margin-top: 100px; font-style: italic; }
+
+        @media (max-width: 768px) { .container { flex-direction: column; } .left-panel { border-right: none; border-bottom: 1px solid #eee; } }
     </style>
 </head>
 <body>
 
-<header>
+<div class="header">
     <h1>欢迎来到我的个人主页</h1>
-</header>
+</div>
 
 <div class="container">
-    <!-- 左半部分：个人简介 -->
+    <!-- 左侧：个人详细介绍 -->
     <div class="left-panel">
-        <h2>🙋‍♂️ 关于我</h2>
-        <p>你好！我是 hzhfuzhou0712。</p>
-        <p>这里可以写你的个人简介、兴趣爱好或者研究方向。</p>
-        <p>目前我正在学习如何通过 GitHub Pages 搭建个人网站。</p>
+        <!-- 1. 照片 -->
+        <img src="avatar.jpg" alt="头像" class="avatar">
         
-        <!-- 这里是添加 PDF 的地方 -->
-        <p>📄 <b>查看我的文档：</b> 
-            <a class="btn-link" href="my_resume.pdf" target="_blank">点击下载/预览 PDF</a>
-        </p>
+        <!-- 2. 邮箱 -->
+        <div class="contact-info">
+            <strong>hzhfuzhou0712</strong><br>
+            📧 <a href="mailto:yourname@email.com">yourname@email.com</a>
+        </div>
+
+        <!-- 3. 教育经历 -->
+        <h3 class="section-title">🎓 教育经历</h3>
+        <div class="edu-item">
+            <span class="edu-date">2020 - 2024</span>
+            <strong>某某大学</strong> · 某某专业 · 学士
+        </div>
+        <div class="edu-item">
+            <span class="edu-date">2017 - 2020</span>
+            <strong>某某高中</strong> · 优秀毕业生
+        </div>
+
+        <!-- 4. 简历链接 -->
+        <h3 class="section-title">📄 个人文档</h3>
+        <p style="font-size: 0.9rem; color: #666;">（部分文件查看需密码）</p>
+        <a href="my_resume.pdf" target="_blank" class="resume-btn">查看/下载简历</a>
     </div>
 
-    <!-- 右半部分：项目/笔记 -->
+    <!-- 右侧：暂时留空 -->
     <div class="right-panel">
-        <h2>🚀 我的项目 & 笔记</h2>
-        <ul>
-            <li>
-                <strong>📚 学习笔记：</strong>
-                <a class="btn-link" href="https://example.com" target="_blank">我的 Python 笔记</a>
-            </li>
-            <li>
-                <strong>💻 实验项目：</strong>
-                <a class="btn-link" href="https://github.com/hzhfuzhou0712" target="_blank">我的 GitHub 仓库</a>
-            </li>
-            <li>
-                <strong>✍️ 最近更新：</strong>
-                <span>2024年3月 - 网站正式上线</span>
-            </li>
-        </ul>
+        <!-- 这里你可以先不填，等想好了再加内容 -->
+        <p class="placeholder-text">内容正在准备中...</p>
     </div>
 </div>
 
