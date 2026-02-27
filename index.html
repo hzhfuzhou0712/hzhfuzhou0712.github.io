@@ -23,9 +23,14 @@
         .resume-btn { display: inline-block; margin-top: 10px; padding: 8px 16px; background: #3498db; color: white; text-decoration: none; border-radius: 4px; transition: 0.3s; }
         .resume-btn:hover { background: #2980b9; }
 
-        /* 右侧栏：留空 */
+        /* 右侧栏：笔记与项目 */
         .right-panel { flex: 1.5; padding: 40px; min-width: 320px; background: #fff; }
-        .placeholder-text { color: #ccc; text-align: center; margin-top: 100px; font-style: italic; }
+        .project-list { list-style: none; padding: 0; }
+        .project-item { margin-bottom: 20px; border-bottom: 1px solid #f0f0f0; padding-bottom: 10px; }
+        .project-title { font-weight: bold; display: block; margin-bottom: 5px; color: #2c3e50; }
+        .file-links { font-size: 0.9rem; }
+        .file-links a { color: #3498db; text-decoration: none; margin-right: 15px; }
+        .file-links a:hover { text-decoration: underline; }
 
         @media (max-width: 768px) { .container { flex-direction: column; } .left-panel { border-right: none; border-bottom: 1px solid #eee; } }
     </style>
@@ -39,19 +44,16 @@
 <div class="container">
     <!-- 左侧：个人详细介绍 -->
     <div class="left-panel">
-        <!-- 1. 照片 -->
         <img src="avatar.png" alt="头像" class="avatar">
         
-        <!-- 2. 邮箱 -->
         <div class="contact-info">
             <strong>hzhfuzhou0712</strong><br>
             📧 <a href="mailto:huangzhh2023@shanghaitech.edu.cn">huangzhh2023@shanghaitech.edu.cn</a>
         </div>
 
-        <!-- 3. 教育经历 -->
         <h3 class="section-title">🎓 教育经历</h3>
         <div class="edu-item">
-            <span class="edu-date">2023 - </span>
+            <span class="edu-date">2023 - 至今</span>
             <strong>上海科技大学</strong> · 数学与应用数学 · 学士
         </div>
         <div class="edu-item">
@@ -59,15 +61,59 @@
             <strong>福建省福州第一中学</strong>
         </div>
 
-        <!-- 4. 简历链接 -->
         <h3 class="section-title">📄 个人文档</h3>
         <a href="my_resume.pdf" target="_blank" class="resume-btn">简历</a>
     </div>
 
-    <!-- 右侧：暂时留空 -->
+    <!-- 右侧：笔记与项目 -->
     <div class="right-panel">
-        <!-- 这里你可以先不填，等想好了再加内容 -->
-        <p class="placeholder-text">内容正在准备中...</p>
+        <h3 class="section-title">📚 Projects & Lecture Notes</h3>
+        <ul class="project-list">
+            <!-- 第一行 -->
+            <li class="project-item">
+                <span class="project-title">Lecture Notes on Algebraic Topology</span>
+                <div class="file-links">
+                    <a href="AT_hand.pdf" target="_blank">AT_hand</a>
+                    <a href="AT_LaTeX.pdf" target="_blank">AT_LaTeX</a>
+                </div>
+            </li>
+            <!-- 第二行 -->
+            <li class="project-item">
+                <span class="project-title">Lecture Notes on Advanced Complex Analysis</span>
+                <div class="file-links">
+                    <a href="ACA_hand.pdf" target="_blank">ACA_hand</a>
+                    <a href="ACA_LaTeX.pdf" target="_blank">ACA_LaTeX</a>
+                </div>
+            </li>
+            <!-- 第三行 -->
+            <li class="project-item">
+                <span class="project-title">Project, Algebra: The Jordan-H&ouml;lder Theorem</span>
+                <div class="file-links">
+                    <a href="JH.pdf" target="_blank">JH</a>
+                </div>
+            </li>
+            <!-- 第四行 -->
+            <li class="project-item">
+                <span class="project-title">Project, Algebra: Grothendieck Topology, Galois Group v.s. Fundamental Group</span>
+                <div class="file-links">
+                    <a href="GT.pdf" target="_blank">GT</a>
+                </div>
+            </li>
+            <!-- 第五行 -->
+            <li class="project-item">
+                <span class="project-title">Project, Differential Topology</span>
+                <div class="file-links">
+                    <a href="DT.pdf" target="_blank">DT</a>
+                </div>
+            </li>
+            <!-- 第六行 -->
+            <li class="project-item">
+                <span class="project-title">Lecture Notes on Homological Algebra</span>
+                <div class="file-links">
+                    <a href="HA.pdf" target="_blank">HA</a>
+                </div>
+            </li>
+        </ul>
     </div>
 </div>
 
